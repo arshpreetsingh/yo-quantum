@@ -12,30 +12,36 @@ Amplitude-Amplification: Amplitude Amplification need to learn more!
 from qiskit import *
 #import matplotlib.pyplot as plt
 import numpy as np
-
 # define Oracle Circuit!
 oracle = QuantumCircuit(2,name='oracle')
 oracle.cz(0,1) # Applied control-Z gate on Each Qubit!
 oracle.to_gate()
-print(oracle)
+# This is second Reflection part of the System!
+# Let's Create Reflection!
+reflection = QuantumCircuit(2, name='reflection')
+reflection.h([0,1])
+reflection.z([0,1])
+reflection.cz(0,1)
+reflection.h([0,1])
+reflection.to_gate()
 backend = Aer.get_backend("statevector_simulator")
-
 # Now define Grover-Circuit and Add Oracle to it.
 grover_cirq = QuantumCircuit(2,2)
 grover_cirq.h([0,1])
 grover_cirq.append(oracle,[0,1])
-print("this is Grover-Cirq!!")
+grover_cirq.append(reflection,[0,1])
+grover_cirq.measure([0,1],[0,1])
+print("this is Grover-Cirq!!, Final with Oracle and Reflection(Amplitude-Amplification!)")
 print(grover_cirq)
-
 # Execute Grover-Circuit on Simulator.
 job = execute(grover_cirq,backend)
 result = job.result()
-
-print(result)
-
+print("Result--->",result)
 state_vector = result.get_statevector()
+print("State-Vector--->",result)
 print(state_vector)
-
+counts = result.get_counts()
+print("Counts---->",counts)
 '''
 ## What we have done till now!?
 1. Prepared the Super-Position state.

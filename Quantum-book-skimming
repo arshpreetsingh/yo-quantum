@@ -1,0 +1,139 @@
+                                    ! Wikki For Quantum-Computing for Python/Software Developers!
+                                     ------------------------------------------------------------
+* Flow is inherited from Book "Introduction to Quantum-Computing with Qiskit".
+* All the representations are as follows:
+    |0>,|1> = Those are representations of Kit and Bra Notations! (Don't worry you will get it later.) 
+    * = This represents Bullet-Points or Takeaways.
+    int with . character = Represents just number system as usual. 
+    -->  = represents "="
+    ___  = Represents Headings.
+    ____ = Represents Sub-headings.
+  
+    _/2  = This is Squareroot of Two!(1.4142(approx)).
+
+    []   = I hope readers do understand the representation of Matrices.
+
+1. Note that in quantum computing |0> and |1> are together known as the computational
+basis states.
+
+2. Q-Bit representations using Column Vectors:
+ 
+|0> = [1]
+      [0]
+
+|1> = [0]
+      [1]
+
+3. Super Position can also be define using Column vectors but it depends on what was 
+the initial state of the Qubit. 
+
+if Qubit is |0> then super-position will be:
+            
+
+    |0> --> |0>+|1>                    _ [1]
+            ---_-----       ----> 1/_/2  [1]    this can be also represented as |+>
+             _/2                          
+
+if Qubit is |1> then super-position will be:
+    
+    |1>  -->  |0>-|1>                         [1]
+              --------       -------->  1/_/2 [-1]     this can be also represented as |->
+               _/2 
+
+
+Now in superposition we can easily measure the probability of the state. 
+
+1/_/2 [1]    -----> [0.70710678118]
+                    [0.70710678118]       -----> (0.70710678118)^2 = 0.5 that means Qubit is in Super-Position! 
+      [1]
+
+4. Quantum Logic Gates:
+
+Each Qubit can be represented on Bloch-Sphere. 
+and we have pauli gates to describe the rotation of the gate. 
+___Pauli(X):
+
+Pauli(X) = [0 1]
+           [1 0]
+
+* When we have to Rotate "X" qubit in completely oposite direction(180 degree) then we apply Pauli(X).(Along X-Axis) 
+* That means |0> becomes |1> when Pauli(X) is applied!
+___Pauli(Y):
+
+Pauli(Y) = [0 -i]
+           [i  0]
+* A Pauli Y gate is a rotation of 180 degrees (π radians) around the Y axis of the bloch sphere.
+* This will map |0> to i(iota)|1> and |1> to − i(iota)|0>
+
+___Pauli(Z):
+* A Z gate flips the phase of the qubit by performing a rotation of 180 degrees around the Z axis of the qubit. 
+* This maps |1> to −|1> but leaves |0> unchanged.
+
+Pauli(Z) = [1   0]
+           [0  -1]
+
+___HadmardGate(H):
+
+HadmardGate(H) : 1/_/2 [1   1]
+                       [1  -1]
+
+* Hadmard Gate will put your Qubit into Super-positions! (Although it will depend on Initial state of Qubit as well)
+* Hadmard Gate is reversible means when you apply twice on Same Qubit, Qubit will return back to it's Initial-State! 
+
+
+___S-Gate:
+
+S-Gate(S) = [1  0]
+            [0  i]
+
+*The S gate (otherwise known as the Z gate) is a gate that performs a rotation of pi/2 around the bloch sphere.
+
+Other Gates we have are as Follows:
+
+ .1 T-Gate
+
+There are other Gates like R(X) gate, R(Y) gate and R(Z) Gate!
+
+ .2 U1-Gate(Universal Gate)
+ .3 U2-Gate(Universal Gate)
+ .4 U3-Gate(Universal Gate)
+
+* Above All given Gates are single Qubit-Gates!
+
+
+____Multi-Qubit Gates:-
+
+When there are certain operations which need to apply more than one qubit that.
+* There is one Control-Qubit and one Target-Qubit. 
+* Based on the state of the Control-Qubit(Either |0> or |1>) state of the Target Qubit will be Changed/Flipped!
+
+
+__Controlled Hadamard Gate
+
+
+___C-Not Gate: (Two Qubit Gate.)
+
+C-Not Matrix Representatoin = [1 0 0 0]
+                              [0 1 0 0]
+                              [0 0 0 1]
+                              [0 0 1 0]
+Each column of matrix defines state. |00> ,|01> , |10> , |11>
+
+___Tofalli-Gate (Three Qubit Gate.)
+
+* In Toffli there are Two Control-Qubit gates and one target Qubit!
+* Toffli Gate is three Qubit-Gate. 
+
+___CNOT Gate with N control Qubits! (When you have to control more than one Qubit)
+
+* In this case you have "n" number of Qubits as Control Qubits instead of One Qubbit. 
+
+
+____ Quantum-Circuits!
+
+
+** Before Going more deep into Quantum-Circuits, One need to understand each matrix, 
+Each Matrix that will comeout of Quantum-Circuits or Quantum Operations will be Complex Matrix.
+To understand Complex matrix Just imagine when we would be having "Sure-States" without any Superposition or Quantum-Entanglement
+that means the Complex part of the number will be Zero!
+  
