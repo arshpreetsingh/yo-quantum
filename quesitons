@@ -1,0 +1,21 @@
+1. How to et gates Combination?
+2. S-gate is a  phase gate with what value of the phase?  
+Phase gates and it's values? 
+3. Need to learn and understand more about Barrier!!
+4. difference between measure and measure_all and stuff?
+5. check screen-shots
+6. Average Gate Fidelity, Process-Fidelty
+7. which function given below returns the gate error of a noisy quantum channel?
+8. what is the resultant gate when we apply three  Hadamard gates (in series) in the single-qubit circuit? 
+9. es circuit nu individually test karna hai vi ki changes aundian ne
+qc.h(q)
+qc.x(q)
+qc.x(q)
+qc.h(q)
+qc.x(q)
+
+10. Which of the below gates can be considered as Involutory?
+
+11. what is the output when we apply Hadamard-gate to the basis  |+⟩ = 1/√2(|0⟩+|1⟩) ?
+12. Need to understand the depth of Quantum-circuits!!
+
