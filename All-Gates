@@ -1,0 +1,16 @@
+1. X-Gate: 
+It's a "NOT" gate, will Change from |0> to |1> and |1> to |0> .
+
+ * It can be considered as Bit-Flip Gate. 
+
+2. Y-Gate:
+It's Same as X Gate but when Hadamard(H) gate is applied in Front of it, 
+It also chaanges the Phase!
+
+3. C-Not Gate:  (Controlled Not) [AND-Gate]
+
+So How to implement AND-Gate? 
+
+ * At Each Input Qubit you add NOT-Gate, then you Apply Toffli Gate!
+
+
