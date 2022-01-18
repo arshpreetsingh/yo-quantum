@@ -8,6 +8,8 @@ IBMQ.enable_account(get_api_key())
 provider = IBMQ.get_provider(hub='ibm-q')
 backend = provider.get_backend('ibmq_qasm_simulator')
 print(backend)
+from qiskit.quantum_info import Statevector
+
 #Start Quantum-programming!
 q = QuantumRegister(1, 'q')
 c = ClassicalRegister(1, 'c')

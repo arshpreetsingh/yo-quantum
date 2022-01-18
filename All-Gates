@@ -1,4 +1,23 @@
-1. X-Gate: 
+More on Qiskit bloch sphere: https://www.youtube.com/watch?v=Pfk_9RNQA5A
+S = Rotation by pi/2
+T = Rotation by pi/4
+P = Rotation by pi/8
+Z = Rotation by pi
+
+S = TT
+Z = SS
+Z = TTTT
+
+sv = StateVector.from_label('000')
+sv_ev = sv.evolve(qc)
+sv_ev.draw('qsphere')
+
+either get state_vector() from things!
+
+plot_state_qsphere()
+
+
+1. X-Gate:
 It's a "NOT" gate, will Change from |0> to |1> and |1> to |0> .
 
  * It can be considered as Bit-Flip Gate. 
@@ -13,4 +32,10 @@ So How to implement AND-Gate?
 
  * At Each Input Qubit you add NOT-Gate, then you Apply Toffli Gate!
 
+3. Circuit-Depth: [Need to Learn more and understand about Depth of Circuits!!]
+ 
+ * Circuit Depth is defined as no. of "Quantum-Gates" those executed along the
+   longest path in the circuit. 
 
+4. GHZ Circuit(): https://www.youtube.com/watch?v=g0FVmzkiUqU
+Play more with GHZ circuit to understand Entangled States and all!

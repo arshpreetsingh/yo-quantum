@@ -1,0 +1,4 @@
+1. Always check from left to right about gate-state probabilities.
+2. CX-Gate: if Control Qubit is 1 then target State Will be Flipped otherwise
+not!
+3. 
