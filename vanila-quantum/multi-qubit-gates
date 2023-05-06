@@ -1,0 +1,59 @@
+Controlled-NOT (CNOT) Gate: This is a two-qubit gate that applies an X gate (bit-flip)
+on the target qubit if the control qubit is in the |1⟩ state. The matrix representation
+of CNOT is:
+
+makefile
+
+CNOT = | 1 0 0 0 |
+       | 0 1 0 0 |
+       | 0 0 0 1 |
+       | 0 0 1 0 |
+
+Controlled-Pauli-Y (CY) Gate: This two-qubit gate applies a Pauli-Y gate on the
+target qubit if the control qubit is in the |1⟩ state. The matrix representation of CY is:
+
+makefile
+
+CY = | 1 0 0  0  |
+     | 0 1 0  0  |
+     | 0 0 0 -1j |
+     | 0 0 1j  0 |
+
+Controlled-Pauli-Z (CZ) Gate: This two-qubit gate applies a Pauli-Z gate on the target
+qubit if the control qubit is in the |1⟩ state. The matrix representation of CZ is:
+
+makefile
+
+CZ = | 1 0 0  0 |
+     | 0 1 0  0 |
+     | 0 0 1  0 |
+     | 0 0 0 -1 |
+
+Controlled-U (CU) Gate: This two-qubit gate applies an arbitrary single-qubit unitary gate U on the
+target qubit if the control qubit is in the |1⟩ state. The matrix representation of CU
+depends on the specific unitary U.
+
+Toffoli (CCNOT) Gate: This is a three-qubit gate that applies an X gate on the target qubit if
+both control qubits are in the |1⟩ state. The Toffoli gate is also known as the
+Controlled-Controlled-NOT gate. The matrix representation of Toffoli is:
+
+makefile
+
+Toffoli = | 1 0 0 0 0 0 0 0 |
+          | 0 1 0 0 0 0 0 0 |
+          | 0 0 1 0 0 0 0 0 |
+          | 0 0 0 1 0 0 0 0 |
+          | 0 0 0 0 1 0 0 0 |
+          | 0 0 0 0 0 1 0 0 |
+          | 0 0 0 0 0 0 0 1 |
+          | 0 0 0 0 0 0 1 0 |
+
+Fredkin (CSWAP) Gate: This is a three-qubit gate that swaps the states of the second and
+third qubits if the control qubit (first qubit) is in the |1⟩ state. The Fredkin gate is
+also known as the Controlled-SWAP gate. The matrix representation of Fredkin is:
+
+makefile
+
+    Fredkin = | 1 0 0 0 0 0 0 0 |
+              | 0 1 0 0 0 0 0 0 |
+              | 0 0

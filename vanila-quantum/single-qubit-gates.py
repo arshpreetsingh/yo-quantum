@@ -37,7 +37,6 @@ def get_U2(theta=0, lamda=None, psi=0):
                    [np.exp(1j * psi) * math.sin(theta/2), np.exp(1j * (psi + lamda)) * math.cos(theta/2)]])
     return U3
 
-
 def rotate_X(theta):
     rotation_X = np.array([[math.cos(theta/2),-1j*math.sin(theta/2)],[-1j*math.sin(theta/2),math.cos(theta/2)]])
     return rotation_X
